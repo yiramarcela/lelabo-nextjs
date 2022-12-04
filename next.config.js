@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  basePath: "/yiramarcela.githubpages.io",
+  basePath: "/lelabo-nextjs",
+  assetPrefix: "/lelabo-nextjs,"
 };
 
 module.exports = nextConfig;
