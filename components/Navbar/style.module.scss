@@ -1,0 +1,86 @@
+@import "../../sass/main.scss";
+
+.header {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.8);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-around;
+    z-index: 2;
+    width: 100vw;
+  }
+
+.logolabo {
+  @include labo-icon;
+  margin: 5px 0;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  top: 10%;
+  width: 10rem;
+  cursor: pointer;
+}
+
+.sectiontitle {
+    align-self: center;
+    display: flex;
+    align-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    font-size: 25px;
+    position: relative;
+    left: 0;
+    font-family: urbanist;
+    cursor: default;
+    display: none;
+  }
+
+.burger {
+  position: relative;
+  right: 0;
+  top: 100%;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger__patty {
+  position: relative;
+  width: 60%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.burger__patty:before,
+.burger__patty:after {
+  will-change: transform;
+  content: "";
+  position: absolute;
+  left: 0;
+  background: #fff;
+  height: 2px;
+  width: 100%;
+  transition: all 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.burger__patty:before {
+  top: -10px;
+}
+.burger__patty:after {
+  top: 10px;
+}
+.burger--close .burger__patty {
+  transform: rotate(45deg);
+}
+.burger--close .burger__patty:before {
+  transform: rotate(-90deg) translate(-9px, 0);
+}
+.burger--close .burger__patty:after {
+  opacity: 0;
+  transform: scaleX(0);
+}

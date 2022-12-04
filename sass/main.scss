@@ -1,0 +1,11 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.App {
+  --bg: #fafafa;
+  --hotpink: #e94057;
+  --orange: #f27121;
+
+  --darkInterface: rgba(0, 0, 0, 0.35);
+  --gradient: linear-gradient(35deg, var(--orange), var(--hotpink));
+}
