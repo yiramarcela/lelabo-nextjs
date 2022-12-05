@@ -1,4 +1,4 @@
-import Lesalon from '../../components/Lesalon'
+import Lesalon from '../../../components/Lesalon'
 
 const Expositions = ({ baseArticles }) => <Lesalon
     path='expositions'

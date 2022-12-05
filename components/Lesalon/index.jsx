@@ -42,6 +42,11 @@ const Lesalon = ({
     ));
   };
 
+
+  useEffect(() => {
+    console.log({ menuElements });
+  }, [menuElements])
+
   useEffect(() => {
     if (!path &&
       baseArticles.length === 0 &&
@@ -110,6 +115,7 @@ const Lesalon = ({
   useEffect(() => {
     if (!filteredArticle) return
     const nameArticle = strings.removeSpaces(filteredArticle);
+    console.log(nameArticle);
     const filteredData = menuElements.filter(element => strings.removeSpaces(element.Titre) === nameArticle)
     console.log({ filteredData });
     toggleDetails()
@@ -131,7 +137,7 @@ const Lesalon = ({
     />
   }
 
-  if(isLoading) {
+  if (isLoading) {
     return null
   }
 
@@ -158,7 +164,7 @@ const Lesalon = ({
                 className="generalContent"
               >
                 {menuElements.map((article) => (
-                  <Link key={article.ID} href={`${path}/${strings.removeSpaces(article.Titre)}`}>
+                  <Link key={article.ID} href={`${path}/${article.ID}`}>
                     <li className={styles.itemArticles}>
                       <button
                         onClick={() => {
